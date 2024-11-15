@@ -83,7 +83,7 @@ import torch
 wav, sr = torchaudio.load('<SPEECH_FILE_PATH>')
 
 # monophonic checking
-if wav.shape(0) > 1:
+if wav.shape[0] > 1:
     wav = wav[:1,:]
 
 if sr != model.sample_rate:
